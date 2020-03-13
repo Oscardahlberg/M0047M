@@ -16,7 +16,7 @@ root = 0.5;
 oldRoot = 0;
 % While the difference between the root and the
 % oldRoot is larger than the margin we set
-while abs(root - oldRoot)  > margin
+while abs(root - oldRoot) > margin
     oldRoot = root;
     % Formula for Newtons Raphsons method
     root = root - y(root) / dy(root);
