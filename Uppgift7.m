@@ -1,6 +1,6 @@
 disp("1.4.39 Finding roots")
 disp("Looking at the funtion f(x) = x^3 + x - 1")
-disp("By making some small calculations we can see")
+disp("By making some calculations we can see")
 % Like substituting x for 0 & 1
 disp("that there should be a root between")
 disp("0 < x < 1")

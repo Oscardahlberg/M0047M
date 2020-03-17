@@ -1,23 +1,32 @@
 disp("P5.17, Analysing graphs")
 disp("Graphs to analyse:")
 disp("sqrt(x), 2 + sqrt(x), 2 + sqrt(3 + x), 1. / (2 + sqrt(3 + x))")
-f = @(x) sqrt(x);
-g = @(x) 2 + sqrt(x);
-h = @(x) 2 + sqrt(3 + x);
-j = @(x) 1. / (2 + sqrt(3 + x));
-
 hold on
-fplot(f)
-fplot(g)
-fplot(h)
-fplot(j)
 
-% We realize that the red line is just the blue line
-% moved up two y places
+x = 0:0.01:5;
+f = @(x) sqrt(x);
+y = f(x);
+plot(x, y)
 
-% The yellow line is just the red line moved back 3
-% x places
+g = @(x) 2 + sqrt(x);
+y = g(x);
+plot(x, y)
 
-% And the purple line is the yellow line moved down 1,5
-% places, flipped, and reduced in size by half
+x = -3:0.01:5;
+h = @(x) 2 + sqrt(3 + x);
+y = h(x);
+plot(x, y)
+
+j = @(x) 1 ./ (2 + sqrt(3 + x));
+y = j(x);
+plot(x, y)
+
+disp("We realize that the red line is just the blue line")
+disp("moved up two y places")
+
+disp("The yellow line is just the red line moved back 3")
+disp("x places")
+
+disp("And the purple line is the yellow line moved down 1,5")
+disp("places, flipped, and reduced in height by half")
 
